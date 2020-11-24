@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//THIS CODE BELONGS TO A CHARACTER OR OBJECT THAT NEEDS DIALOGUE
+//THIS CODE DOESN'T NEED TO BE IN A CHARACTER OR OBJECT
 
 
 //With the code being serializable we can use it in the Inspector when other code requires it

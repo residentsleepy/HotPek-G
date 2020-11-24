@@ -2,39 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//ESTE CODIGO PUEDE IR EN UN EMPTY OBJECT
+//THIS CODE IS BETTER TO HAVE IN A EMPTY OBJECT
+
+//This code is used to spawn a defined number of fruits in defined locations in a randomized way
 
 public class FruitSpawn : MonoBehaviour
 {
-    //Listas que permiten colocar los prefab de las frutas que se usaran y
-    //Los puntos en el mapa que se usaran como posición del spawn de las frutas
+    //pointList saves the defined spaces where we would spawn fruits
+    //fruits allow us to select the prefabs wi will spawn using the Inspector
     public List<GameObject> pointList = new List<GameObject>();
     public List<GameObject> fruits = new List<GameObject>();
-    //Cuantas frutas se spawnearan
+    //With this we define how many we want in the scene
     public int SpawnCount;
-    //Nos sirve como spawner de la fruta y la posición aleatoria
+    //This is used for the Instantiate function
     private GameObject fruitToSpawn;
 
     void Start()
     {
-        //Iniciaremos las escenas spawneando las frutas
+        //Since we want our fruits to be available since the beginning of the scene we call the function at Start()
         SpawnFruits();
     }
 
-    //Método para hacer el spawn aleatorio de las frutas
+    //This function is used for the spawning of fruits in the random chosen spaces 
+    //making sure we don't put more than 1 in a single place at the time
     void SpawnFruits()
     {
-        //Establecemos un arreglo para guardar las posiciones que se usarán
-        Vector3[] positions = new Vector3[SpawnCount];
-        //Empecemos un ciclo for que durará según cuantos vamos a spawnear
+        //We use a cycle that repeats the number of times equal to the fruit we need
         for (int i=0; i<SpawnCount; i++)
         {
-            //Se elige un número aleatorio entre los posibles de las listas de posiciones y frutas
+            //A Random space and random fruit from our Lists are chosen
+            //Let's note that we are using .Count because the number of elements on our list changes during this process
             int choiceSpace = Random.Range(0, pointList.Count);
             int choiceFruit = Random.Range(0, fruits.Count);
-            //La fruta hace spawn, con una fruta aleatoria y la posición de uno de los espacios
+            //We Instantiate the chosen fruit in our chosen space
             fruitToSpawn = Instantiate(fruits[choiceFruit], pointList[choiceSpace].transform.position, Quaternion.identity);
-            //Cuando se usa un espacio, se remueve de la lista para no repetirlo.
+            //We delete the space we used from the list to make sure it can only be used one time per game
             pointList.RemoveAt(choiceSpace);
         }
     }
