@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
   public void PlayGame()
     {
         // Data Base Scenes to Change
-        SceneManager.LoadScene("GameTest");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void QuitGame()
