@@ -5,9 +5,11 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    //Creamos Variable navMesh
     NavMeshAgent nm;
+    //Variable donde indicamos donde esta nuestro jugador
     public Transform target;
-
+    //Distancia de vision 
     public float distanceThreshold = 10f;
 
     public enum AIState { idle,chasing};
@@ -15,9 +17,11 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Obtenemos el componente NavMesh del Objeto enemigo
         nm = GetComponent<NavMeshAgent>();
+        //Empezamos Una Corutina
         StartCoroutine(Think());
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+       
     }
 
     // Update is called once per frame
@@ -30,6 +34,14 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+            //verificamos que hay un objeto conel tag player para seguir, si el enemigo no se mueve.
+            if (GameObject.FindGameObjectWithTag("Player") != null)
+            {
+                target = GameObject.FindGameObjectWithTag("Player").transform;
+            } else
+            {
+                target = gameObject.transform;
+            }
             switch (aiState)
             {
                 case AIState.idle:
