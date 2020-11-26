@@ -13,6 +13,9 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            FindObjectOfType<AudioManager>().Play("Jumpy");
+        }
     }
 }

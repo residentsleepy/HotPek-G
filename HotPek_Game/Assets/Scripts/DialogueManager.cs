@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
         //This cycle is used to add setnences to the cleared queue to later show it
         foreach (string sentence in dialogue.sentences)
         {
-            //This line is disabilited for the moment, is used to play a sound
+            //DISABLED UNTIL WE HAVE SOUNDS
             /*
             FindObjectOfType<AudioManager>().Play("BoxSound");
             */
@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour
         //If there are no more sentences
         if (sentences.Count == 0)
         {
-            //This line is disabilited for the moment, is used to play a sound
+            //DISABLED UNTIL WE HAVE SOUNDS
             /*
             FindObjectOfType<AudioManager>().Play("BoxSound");
             */
