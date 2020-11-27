@@ -3,82 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//THIS CODE BELONGS TO THE CHARACTER, IT NEEDS A BOX COLLIDER TO BE ABLE TO WORK
+//ESTE CODIGO PERTENECE AL PERSONAJE PRINCIPAL, ES NECESARIO UN BOX COLLIDER PARA FUNCIONAR
 
-//This code allow us to check if the character is able to pick up fruit and increase it's score.
-//It can be used also to interact with other object by using the Box Collider the character has infront of it
+//El código permite al personaje interactuar con objetos como frutas y tambien llevar el conteo de puntuación
 
 public class ColectFruit : MonoBehaviour
 {
-    //This represents the collider in front of our character, used for detect interactable objects.
-    private BoxCollider colli;
-    //Player's score and how much will it increase
-    private int score;
-    public int scoreBonus = 10;
-    //Part is just a placeholder we need, fruit represents the fruit or object we interact with
-    private GameObject part, fruit;
-    //This allow us to use a particle system for more effects in the game. We manually control it in the Inspector.
-    public GameObject particle;
-    //We save the position of the last object to cause a trigger
-    private Vector3 fruitPos;
-    //With this boolean we set if it is posible to collect an object
-    private bool collectable = false;
+    private int score; //La puntuación del jugador
+    public int scoreBonus = 10; //Y el incremento por cada fruta recogida
+    private GameObject part, fruit; //Part funciona para el manejo de sistemas de particulas y Fruit representa el objeto a interactuar
+    public GameObject particle; //Esto representa el sistema de partículas que usaremos en el juego, puede ser controlado en el Inspector
+    private Vector3 fruitPos; //Usado para guardar la ultima posición del objeto que causó un trigger
+    private bool collectable = false; //Este booleano es utilizado para determinar si podemos recoger un objeto o no
    
 
     void Start()
     {
-        //We set our Box Collider to be used
-        colli = GetComponent<BoxCollider>();
-        //And we stablish our initial score
-        score = 0;
-        //This line of code is used to check if the score is correct with each interaction
-        Debug.Log("Score: " + score);
+        score = 0; //Establecemos nuestra puntuación inicial
+        Debug.Log("Score: " + score); //Usamos el mensaje en Consola para determinar que la puntuación se registre de manera correcta
     }
 
     void Update()
     {
-        //If we are able to collect we can press the left click to trigger some events:
+        //Si somos capaces de recoger objetos y apretamos Espacio lo siguiente pasa
         if (Input.GetKeyDown(KeyCode.Space) && collectable == true)
         {
-            Debug.Log("Space Pressed");
-            //The particle system we are using is triggered
-            part = Instantiate(particle, fruitPos, Quaternion.identity);
-            //Our score goes up
-            score += scoreBonus;
-            Debug.Log("Score: " + score);
-            //And the fruit we collected disappears and our state goes back to being unable to collect
-            Destroy(fruit);
-            collectable = false;
+            Debug.Log("Space Pressed"); //Un mensaje para comprobar la interacción
+            part = Instantiate(particle, fruitPos, Quaternion.identity); //Part toma la instancia del sistema de partículas que tenemos establecido en la posición de la fruta con la que interactuamos
+            score += scoreBonus; //Nuestra puntuación sube
+            Debug.Log("Score: " + score); //Mensaje para comprobar que la puntuación subió
+            Destroy(fruit); //Hacemos desaparecer la fruta que recogimos
+            collectable = false; //Y establecemos que la interacción acabó haciendo collectable falso
         }
     }
 
-    //If we have a trigger through our collider...
-    //(All interactable objects must have a trigger and Rigibody)
+    //Si hacemos trigger con un objeto...
+    //(Todo interactuable tiene que tener un trigger collider y rigibody)
     private void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Trigger");
-        //If we interact with a fruit
-        if (col.gameObject.tag == "Fruit")
+        Debug.Log("Trigger"); //Mensaje de comprobación
+        if (col.gameObject.tag == "Fruit") //Si el trigger fue causado por una fruta
         {
-            Debug.Log("Trigger with Fruit");
-            //We save its position
-            fruitPos = col.gameObject.transform.position;
-            //Quick check of data
+            Debug.Log("Trigger with Fruit"); //Mensaje de comprobación
+
+            fruitPos = col.gameObject.transform.position; //Guardamos su posición para usarla después
+            //Comprobación rápida de datos
             Debug.Log(col.gameObject.transform.position.x);
             Debug.Log(col.gameObject.transform.position.y);
             Debug.Log(col.gameObject.transform.position.z);
-            //We set a variable to have the trigger fruit to be an active element we are interacting with
-            fruit = col.gameObject;
-            //And we set us to be able to collect
-            collectable = true;            
+            fruit = col.gameObject; //Establecemos fruit para seguir referenciando al objeto con el que interactuamos
+            collectable = true; //Establecemos que es posible recolectar objetos
         }
     }
 
-    //When we exit a trigger
+    //Si salimos del trigger
     private void OnTriggerExit(Collider col)
     {
-        //We need to establish that we can't collect
-        Debug.Log("Trigger Exit");
-        collectable = false;
+        Debug.Log("Trigger Exit"); //Mensaje de comprobación
+        collectable = false; //Hacemos collectable falso para evitar que podamos recolectar un objeto y destruirlo aunque ya no estemos junto a este
     }
 }

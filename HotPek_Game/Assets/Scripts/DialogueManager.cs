@@ -5,104 +5,96 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    //THIS CODE NEEDS TO BE IN A CHARACTER OR OBJECT THAT HAS DIALOGUE
+    //ESTE CODIGO VA EN UN PERSONAJE U OBJETO QUE TENGA DIALOGO
 
-    public Dialogue dialogue; //We use the code for the ability to define a name and multiple sentences for our character or item
-    public Text nameText; //UI Text were the name will be shown
-    public Text dialogueText; //UI Text were the dialogue will be shown
-    public Animator animator; //Necessary Animator for turning on/off the dialogue UI
-    private Queue<string> sentences; //We use this for the sentences to show
-    private float charSpeed; //This value is used to store the original player character speed
+    //Con este código controlamos las oraciones de una personaje u objeto, así como el momento en que aparecen y desaparecen en pantalla
+
+    public Dialogue dialogue; //Usamos está clase para determinar el nombre y dialogo(s) del objeto/personaje
+    public Text nameText; //Cuadro de Texto de la UI donde aparecerá el nombre del objeto/personaje
+    public Text dialogueText; //Cuadro de Texto de la UI donde aparecerán los dialogos
+    public Animator animator; //El Animator es usado para controlar cuando aparecen los cuadros de texto en pantalla
+    private Queue<string> sentences; //Usamos esta queue para controlar como aparece el texto
+    private float charSpeed; //Usamos este float para guardar la velocidad original del jugador
 
 
     void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<string>(); //Creamos la queue que nos servirá en las funciones de los dialogos
     }
 
-    //When the player character approaches we initialize the dialogue
+    //Cuando se causa un trigger en el objeto...
     void OnTriggerEnter(Collider other)
     {
-        //First we need to be sure that the trigger is the character
-        if (other.tag == "Player")
+        if (other.tag == "Player") //Primero necesitamos determinar si el trigger fue causado por el jugador
         {
-            //We store the current speed of the character and then set it to zero to prevent movement
-            charSpeed = other.GetComponent<PlayerController>().speed;
-            other.GetComponent<PlayerController>().speed = 0;
-            //Then we call the function to start the dialogue using the values the Dialogue gives us to work
-            StartDialogue(dialogue);
+            charSpeed = other.GetComponent<PlayerController>().speed; //Guardamos el valor original de la velocidad del jugador
+            other.GetComponent<PlayerController>().speed = 0f; //Después de guardarlo lo hacemos 0 para evitar que se mueva durante el dialogo
+            StartDialogue(dialogue); //Llamamos la función dialogo usando el que declaramos en nuestras variables (y que configuramos en el Inspector)
         }
     }
 
-    //With this function we show the dialogue in screen using an animator
-    //We need a Dialogue as a parameter to define the name and sentences we will show
+    //Esta función es la usada para mostrar nuestros dialogos en pantalla usando el Animator
+    //Se usa el Dialogue como parametro para tener los nombres y oraciones definidos
     public void StartDialogue(Dialogue dialogue)
     {
-        //We set the boolean the animator has as true to show it on screen
+        //Establecemos el booleano que usa el Animator como true para que aparezca en pantalla
         animator.SetBool("IsOpen", true);
-        //We define the name that will be used
-        nameText.text = dialogue.name;
-        //We clear our queue
-        sentences.Clear();
-        //This cycle is used to add setnences to the cleared queue to later show it
+        nameText.text = dialogue.name; //Se define el texto para el nombre
+        sentences.Clear(); //Libramos la queue
+        //Este ciclo es usado para guardar cada sentence que aparecerá
         foreach (string sentence in dialogue.sentences)
         {
-            //DISABLED UNTIL WE HAVE SOUNDS
+            //LINEA DESHABILITADA //Se usará si le ponemos sonido a los dialogos
             /*
             FindObjectOfType<AudioManager>().Play("BoxSound");
             */
             sentences.Enqueue(sentence);
         }
-        //Then we call the next function to show our lines of text
-        DisplayNextSentence();
+        DisplayNextSentence(); //Llamamos a esta función para mostrar la siguiente oración
     }
 
 
-    //This function is used to call the function necessary to tyoe characters on the screen while checking our current sentence
-    //To know if the dialogue has ended or not
+    //Esta función se utiliza para mostrar los dialogos disponibles para el objeto/personaje, mostrandolos poco a poco
     public void DisplayNextSentence()
     {
-        //If there are no more sentences
+        //Primero se determina si ya no hay más oraciones para mostrar
         if (sentences.Count == 0)
         {
-            //DISABLED UNTIL WE HAVE SOUNDS
+            //LINEA DESHABILITADA //Se usará si le ponemos sonido a los dialogos
             /*
             FindObjectOfType<AudioManager>().Play("BoxSound");
             */
-            //We call the EndDailogue function keep playing outside the dialogue
+            //En caso de no tener mas oraciones llamamos a la función que termina los dialogos
             EndDialogue();
-            //We give the character the speed it had before the dialogue
+            //Y le devolvemos al jugador su velocidad original
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().speed = charSpeed;
             return;
         }
-        //This line is disabilited for the moment, is used to play a sound
+        //LINEA DESHABILITADA //Se usará si le ponemos sonido a los dialogos
         /*
         FindObjectOfType<AudioManager>().Play("VoiceSound");
         */
-        //If we still have sentences we need to dequeue them
-        //Stoping previous coroutine used for previous sentences and
-        //Creating a new coroutine for the current sentence
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        string sentence = sentences.Dequeue(); //Si aún tenemos oraciones las sacamos de queue
+        StopAllCoroutines(); //Se paran las corrutinas previas (causadas por anteriores oraciones)
+        StartCoroutine(TypeSentence(sentence)); //Y creamos una nueva corrutina para mostrar la oración actual
     }
 
 
-    //This IEnumerator is used to the display of the text letter by letter of our sentences
+    //Este IEnumerator es usado para mostrar letra por letra las oraciones que teníamos en la queue
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
+        foreach (char letter in sentence.ToCharArray()) //Aqui convertimos las oraciones en caracteres
         {
-            dialogueText.text += letter;
+            dialogueText.text += letter; //El texto se va actualizando con cada caracter que tenemos en las oraciones
             yield return null;
         }
     }
 
-    //When the dialogue has ended we set our Animator's boolean to false to hide it's UI
+    //Si no quedan más oraciones entonces podemos cerrar el cuadro de dialogo del UI
     void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        animator.SetBool("IsOpen", false); //Se determinar el booleano del Animator como falso para guardarlo
     }
 
 }

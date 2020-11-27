@@ -1,26 +1,21 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 
-//THIS CODE ISN'T NEEDED IN A CHARACTER OR OBJECT
+//ESTE CÓDIGO SE USA COMO CLASE, NO VA EN NINGUN OBJETO O PERSONAJE
 
-//This code is used to have serializable fields that will help us manage the sounds in all the scenes
+//El código nos permite definir diferentes atributos de los sonidos que podrán ser usados durante el juego
 
 [System.Serializable]
 public class Sound
 {
-
-    public string name; //The name the audio will use
-
-    public AudioClip clip; //The AudioClip itself that will be played
-
+    public string name; //Nombre del clip de audio
+    public AudioClip clip; //El AudioClip que será usado
     [Range(0f, 1f)]
-    public float volume; //Slider to control the volume of each sound
+    public float volume; //Slider para controlar el volumen del audio
     [Range(.1f,3)]
-    public float pitch; //Slider to control the pitch of each sound
-
-    public bool loop; //This boolean allow us to repeat the audio when it ends
-
-    [HideInInspector] //This defines where will the audio come from in the scene
-    public AudioSource source; //This also allow us to manage the AudioSource(s) we create in the AudioManager script
+    public float pitch; //Slider para controlar el pitch del audio
+    public bool loop; //Este booleano determina si el audio se reproducirá de manera consistente o no
+    [HideInInspector]
+    public AudioSource source; //El AudioSource determina de donde viene el audio y su intensidad segun que tan cerca a lejos está del AudioListener
     
 }

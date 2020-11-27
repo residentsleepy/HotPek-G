@@ -2,36 +2,35 @@
 using System;
 using UnityEngine;
 
-//THIS CODE GOES ALONG THE AUDIO MANAGER OBJECT
+//ESTE CODIGO VA JUNTO CON EL OBJETO DEL MISMO NOMBRE (AUDIOMANAGER)
 
-//The code controls the sounds we use while we play the game controlling multiples aspects of the sound
-//The advantage with this code is being able to call it from other scripts to play our chosen sounds
+//El código controla varios aspectos de los diferentes sonidos que necesitemos usar durante la ejecución del programa
+//La ventaja del código es poder llamarlo desde otros scripts para reproducir sonidos en los momentos deseados
 
 public class AudioManager : MonoBehaviour
 {
 
-    public Sound[] sounds; //Our array of sounds we will be using through the game
+    public Sound[] sounds; //Esto servirá como nuestra colección de sonidos con toda la configuración que la clase Sound nos permite
 
-    public static AudioManager instance;
+    public static AudioManager instance; //Usamos este mismo AudioManager para la verificación de si existe o no en la escena
 
     void Awake()
     {
-        //This is used mainly if we able the use of one AudioManager in multiple scenes
-        //This checks if we already have an Audio Manager
-        //If we don't have one we create it
+        //Aqui tenemos la comprobación de la existencia del AudioManager en caso de que usemos el mismo en varias escenas
+        //Si no tenemos uno lo establecemos como este mismo
         if(instance == null)
             instance = this;
-        else //But if we already have one in scene we destroy it to not have double AudioClips playing
+        else //Pero si ya tenemos uno lo borramos para evitar repeticiones de sonido innecesarias
         {
             Destroy(gameObject);
             return;
         }
 
-        //THIS LINE IS DISABLED //Use it if we need the AudioManager in every scene with the music playing constantly
+        //LINEA DESHABILITADA //La usamos si queremos que el AudioManager no sea destruido al cambiar de escena
         //DontDestroyOnLoad(gameObject);
 
-        //This creates an AudioSource for each of the sounds we are using
-        //Ensuring everyone can be played at the same time (we could not if we only had one AudioSource)
+        //Aqui se crea un AudioSource por cada sonido que vayamos a usar durante el juego
+        //Crear varios AudioSource nos permite reproducir multiples sonidos al mismo tiempo sin interrumpir otros
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -44,16 +43,16 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    //When this function is called we take the string given as a parameter to find the sound in our list that matches the parameter
-    //This makes the sound play in the scene from our previously created AudioSource
+    //Esta función es usada para reproducir los audios que tengamos guardados en nuestro AudioManager
+    //El string que usa como parametro debe ser el nombre de alguno de los audios guardados
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name); //In this first line what we do is to find a match making a comparisson between the parameter and our array
-        if (s == null) //If there are no matches a message telling us the sound is non existent will show up in our Console
+        Sound s = Array.Find(sounds, sound => sound.name == name); //En esta línea hacemos una comparación entre nuestro parametro y los miembros de Sounds s
+        if (s == null) //Si no hay ninguna coincidencia, un mensaje aparecerá en consola para notificarnos
         {
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        s.source.Play(); //If there is a sound it will play with the parameters we stablish in Inspector (AudioClip, Volume, Pitch)
+        s.source.Play(); //Si hay coincidencia el sonido se reproducirá siguiendo los parametros establecidos (AudioClip, Volume, Pitch)
     }
 }
