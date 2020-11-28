@@ -171,7 +171,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 200
+    m_MaxSpeed: 150
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -264,7 +264,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675238252995}
-  m_LocalRotation: {x: 0.06823424, y: -0.000000017166276, z: 0.0000000011740642, w: 0.99766934}
+  m_LocalRotation: {x: 0.06823426, y: 0.000000017166283, z: -0.000000001174065, w: 0.99766934}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -467,7 +467,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675514238689}
-  m_LocalRotation: {x: 0.050075874, y: 0.00000003463706, z: -0.0000000017366598, w: 0.99874544}
+  m_LocalRotation: {x: 0.050075874, y: -0.000000034637058, z: 0.0000000017366596, w: 0.99874544}
   m_LocalPosition: {x: 0, y: 1.2299999, z: -8.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1084,7 +1084,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dd736192f898b2642976868c84f832d9, type: 2}
+  - {fileID: 2100000, guid: a8ac4e6e4e5fd6e4fb6c4bc15a19a18c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
