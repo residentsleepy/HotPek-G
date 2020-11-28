@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//
+//  control principal del jugador
+//  siempre el jugador avanzara a adelante, utilizando la camara como referencia 
+//
+//
 public class PlayerController : MonoBehaviour
 {
     //El jugador siempre avanzara a adelante con respecto a la ubicacion de la camara.
