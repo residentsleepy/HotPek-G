@@ -1,41 +1,46 @@
 fileFormatVersion: 2
-guid: c7f329e121878bb4aaac715f6b4299e6
+guid: 640fd123962b928429f4662c64341507
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 8783966062096358488
-    second: Armature|Abundio_Distracted
+      74: 5979098086075944004
+    second: Armature|Karen_Idle
   - first:
-      74: -5592794438800656912
-    second: Armature|Abundio_Idle
+      74: -6459763471860057816
+    second: Armature|Karen_Run
   - first:
-      74: -1747757146348040230
-    second: Armature|Abundio_Surprised
+      74: 6512660406193628032
+    second: Armature|Karen_Surprised
   - first:
-      74: 6180138014751513558
-    second: Armature|Abundio_Walk
+      74: 519023010105228253
+    second: Armature|Karen_Walk
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: bf511530f91590b43a21db405e2b4d09, type: 2}
+    second: {fileID: 2100000, guid: ab601f4fb86f5d84ea7951dc791733d4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 4c190ee5f075fc74c901970514d4d25c, type: 2}
+    second: {fileID: 2100000, guid: 2cd236b2834ee3d4f88ab1f2c3b43c9b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 5cd89882b5f16634c9808911adf61d5c, type: 2}
+    second: {fileID: 2100000, guid: 9a907d7031554224eb90aa7fb62aab5b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 1a0f3612f23967f4194c85f1cf262e9d, type: 2}
+    second: {fileID: 2100000, guid: 0464b4d3463318c479b53adffdd32305, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 84fe386bf5287e64e86ee05e2fd41544, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

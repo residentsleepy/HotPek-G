@@ -1,41 +1,41 @@
 fileFormatVersion: 2
-guid: c7f329e121878bb4aaac715f6b4299e6
+guid: 9ec3ec321125d0443941688e37fbca79
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 8783966062096358488
-    second: Armature|Abundio_Distracted
+      74: -6534106117889688933
+    second: Armature|Timmy_Idle
   - first:
-      74: -5592794438800656912
-    second: Armature|Abundio_Idle
+      74: -2366756715641859740
+    second: Armature|Timmy_Run
   - first:
-      74: -1747757146348040230
-    second: Armature|Abundio_Surprised
+      74: -5328638902923698157
+    second: Armature|Timmy_Surprised
   - first:
-      74: 6180138014751513558
-    second: Armature|Abundio_Walk
+      74: 5348861056324371882
+    second: Armature|Timmy_Walk
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: bf511530f91590b43a21db405e2b4d09, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 4c190ee5f075fc74c901970514d4d25c, type: 2}
+    second: {fileID: 2100000, guid: b180dee17007cb94a9bb26c091e468f0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 5cd89882b5f16634c9808911adf61d5c, type: 2}
+    second: {fileID: 2100000, guid: cf27fb120eedf1244a9e127ae253173b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 1a0f3612f23967f4194c85f1cf262e9d, type: 2}
+    second: {fileID: 2100000, guid: e6d618f4be1f3f745a3db4d1ec51edbe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 587e88d890c5f4a4aa7b3a6cd5953603, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

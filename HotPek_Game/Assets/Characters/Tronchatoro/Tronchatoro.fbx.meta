@@ -1,41 +1,41 @@
 fileFormatVersion: 2
-guid: c7f329e121878bb4aaac715f6b4299e6
+guid: b6f6dc09105d666479eec5aa28d0680f
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 8783966062096358488
-    second: Armature|Abundio_Distracted
+      74: -6534482902528658771
+    second: Armature|Tronchatoro_Idle
   - first:
-      74: -5592794438800656912
-    second: Armature|Abundio_Idle
+      74: -8407459881902748278
+    second: Armature|Tronchatoro_Run
   - first:
-      74: -1747757146348040230
-    second: Armature|Abundio_Surprised
+      74: -3147032836868368372
+    second: Armature|Tronchatoro_Surprise
   - first:
-      74: 6180138014751513558
-    second: Armature|Abundio_Walk
+      74: -2725290536170290702
+    second: Armature|Tronchatoro_Walk
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: bf511530f91590b43a21db405e2b4d09, type: 2}
+    second: {fileID: 2100000, guid: dc714f57eebb7d4468f028b2eb30e1b1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 4c190ee5f075fc74c901970514d4d25c, type: 2}
+    second: {fileID: 2100000, guid: 7301c5103536b9946b4a1a9272519b6f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 5cd89882b5f16634c9808911adf61d5c, type: 2}
+    second: {fileID: 2100000, guid: e3e7709f54de35d4180930c3b339f01f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 1a0f3612f23967f4194c85f1cf262e9d, type: 2}
+    second: {fileID: 2100000, guid: 674957fa3028efb4ebb227f2a495e798, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
