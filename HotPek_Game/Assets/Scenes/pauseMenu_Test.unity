@@ -266,7 +266,7 @@ RectTransform:
   m_LocalScale: {x: 0.25978118, y: 0.25978118, z: 0.25978118}
   m_Children: []
   m_Father: {fileID: 1636003002}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -522,7 +522,7 @@ RectTransform:
   m_Children:
   - {fileID: 1026608457}
   m_Father: {fileID: 1636003002}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.7498969, y: 0.10345284}
   m_AnchorMax: {x: 0.855, y: 0.15820754}
@@ -571,7 +571,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 197905238}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2395700}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &197905238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -953,7 +965,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 824463973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2395700}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &824463973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,7 +1097,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920437487}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2395700}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: AjustesMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &920437487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,7 +1456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1636003000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,9 +1509,9 @@ RectTransform:
   - {fileID: 920437485}
   - {fileID: 2137343507}
   - {fileID: 824463971}
+  - {fileID: 197905236}
   - {fileID: 6281703}
   - {fileID: 1719176112}
-  - {fileID: 197905236}
   m_Father: {fileID: 2395704}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1515,7 +1551,7 @@ RectTransform:
   m_Children:
   - {fileID: 314004816}
   m_Father: {fileID: 1636003002}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1716,7 +1752,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2137343509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2395700}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2137343509
 MonoBehaviour:
   m_ObjectHideFlags: 0
