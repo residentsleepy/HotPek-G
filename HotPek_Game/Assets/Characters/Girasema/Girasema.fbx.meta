@@ -1,41 +1,47 @@
 fileFormatVersion: 2
-guid: c7f329e121878bb4aaac715f6b4299e6
+guid: 761c11b3740490d41b867292d9c11ee6
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
-      74: 8783966062096358488
-    second: Armature|Abundio_Distracted
+      74: -652049097571304361
+    second: Girasema_Idle
   - first:
-      74: -5592794438800656912
-    second: Armature|Abundio_Idle
+      74: 1143736905409021496
+    second: Girasema_Walk.001
   - first:
-      74: -1747757146348040230
-    second: Armature|Abundio_Surprised
+      74: -5233959722942563252
+    second: Girasema_Surprised.001
   - first:
-      74: 6180138014751513558
-    second: Armature|Abundio_Walk
+      74: 3887137149155263772
+    second: Armature|Girasema_Idle
+  - first:
+      74: 6766023681583213760
+    second: Armature|Girasema_Surprised
+  - first:
+      74: -2375411784491069535
+    second: Armature|Girasema_Walk
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material
-    second: {fileID: 2100000, guid: bf511530f91590b43a21db405e2b4d09, type: 2}
+    second: {fileID: 2100000, guid: c3260065c2e3cb3408ee09b0b4651e7d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.001
-    second: {fileID: 2100000, guid: 4c190ee5f075fc74c901970514d4d25c, type: 2}
+    second: {fileID: 2100000, guid: 8920e472c1d4068479a555708178133f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: 5cd89882b5f16634c9808911adf61d5c, type: 2}
+    second: {fileID: 2100000, guid: d4106a47ada8f514fa45a86ced0d9d55, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.003
-    second: {fileID: 2100000, guid: 1a0f3612f23967f4194c85f1cf262e9d, type: 2}
+    second: {fileID: 2100000, guid: dc5e13b7fb3539c4ea50c735743b5d9d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
