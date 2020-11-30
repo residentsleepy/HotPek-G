@@ -12,13 +12,17 @@ public class PlayerController : MonoBehaviour
     //Necesitamos el objeto camara para saber a donde esta apuntando
     public Transform cam;
     public float speed = 6f;
+    float baseSpeed;
     Rigidbody rb;
+    bool runnAdd;
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     private void Start()
     {
         //Ubicamos el RigidBody del personaje para poder accesar a el mas fácil.
         rb = gameObject.GetComponent<Rigidbody>();
+        baseSpeed = speed;
+        runnAdd = true;
     }
   
     // Update is called once per frame
@@ -43,8 +47,18 @@ public class PlayerController : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0f,angle,0f);
             //Anhadimos la fuerza de movimiento.
             rb.AddForce(transform.forward * speed);
-          
-            
         }
+        
+        //Si apretamos Shift Junk Se mueve mas rápido 
+        if (Input.GetKey("left shift") && runnAdd == true)
+        {
+            speed = speed + 10;
+            runnAdd = false;
+        }
+        if (!Input.GetKey("left shift") && runnAdd == false)
+        {
+            speed = baseSpeed;
+        }
+       
     }
 }

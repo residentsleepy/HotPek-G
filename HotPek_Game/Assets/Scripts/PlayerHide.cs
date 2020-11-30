@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 //
 // El objetivo de este script es hacer invisible al jugador
 // ante los enemigos, utilizando las Tags de Unity y triggers
@@ -36,6 +37,10 @@ public class PlayerHide : MonoBehaviour
         {
             flagHide = false;
             gameObject.tag = "Player";
+        }
+        if(collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene("Menu");
         }
         
     }
