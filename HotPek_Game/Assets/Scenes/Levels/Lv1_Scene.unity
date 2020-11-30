@@ -361,7 +361,22 @@ MonoBehaviour:
   - {fileID: 1061797108}
   - {fileID: 984669097}
   - {fileID: 810701506}
-  fruits: []
+  fruits:
+  - {fileID: 919132149155446097, guid: fda9340830aac0247a3d7ab347f28e4e, type: 3}
+  - {fileID: 919132149155446097, guid: 6ce47bf16a195cc45826d1399f2958ad, type: 3}
+  - {fileID: 919132149155446097, guid: 2bd83b33d5b9b1d4f81d3abba3157c10, type: 3}
+  - {fileID: 919132149155446097, guid: e621623a5bd42cf4486383605fe747e9, type: 3}
+  - {fileID: 919132149155446097, guid: 0cd38b7e14b73e746b81515a7d719168, type: 3}
+  - {fileID: 919132149155446097, guid: 084722e4562a1f343af6939fa2f2767f, type: 3}
+  - {fileID: 919132149155446097, guid: 01bf806d5482f2c449eddea7d3e80058, type: 3}
+  - {fileID: 919132149155446097, guid: 17ec58fa9083f5e47b497e268a89b7bd, type: 3}
+  - {fileID: 919132149155446097, guid: 2ef4d27ebbaaab4488ff64de60ddf59d, type: 3}
+  - {fileID: 919132149155446097, guid: 7b0ac0d43152e3f4fa0fdde7d2673599, type: 3}
+  - {fileID: 919132149155446097, guid: 5af9d79ccb36c654096d2d6b4899722e, type: 3}
+  - {fileID: 919132149155446097, guid: c0ffc9a044990b24b97a11081da42af3, type: 3}
+  - {fileID: 919132149155446097, guid: a3e3209346902ea46a5d47d4057c945d, type: 3}
+  - {fileID: 919132149155446097, guid: 404ed1105373c7a468f7e2252d1a6568, type: 3}
+  - {fileID: 919132149155446097, guid: a25ebcc41696772428eca1427b218626, type: 3}
   SpawnCount: 3
 --- !u!4 &216065440
 Transform:
@@ -2147,6 +2162,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f17251a22f2909439dfd29fc1252df9, type: 3}
   m_PrefabInstance: {fileID: 1365493680}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1365493684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365493681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668be9e178dc8aa4ab33deda30710f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "Televisi\xF3n"
+    sentences:
+    - "Parece que est\xE1n viendo la pel\xEDcula de los Dragones Rosas."
 --- !u!1001 &1376208700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3237,6 +3268,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 398c0e456daa3934ab2196d0683d0907, type: 3}
   m_PrefabInstance: {fileID: 1898551592}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1898551598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898551594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668be9e178dc8aa4ab33deda30710f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Computadora
+    sentences:
+    - "Creo que eso en la pantalla es c\xF3digo... Pobresito."
 --- !u!1001 &1939789614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3489,6 +3536,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a32d775bbed79bf4ea2982d8f4aec168, type: 3}
   m_PrefabInstance: {fileID: 2056564289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2056564293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056564290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668be9e178dc8aa4ab33deda30710f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Cama
+    sentences:
+    - A mimir.
 --- !u!1001 &2106643889
 PrefabInstance:
   m_ObjectHideFlags: 0

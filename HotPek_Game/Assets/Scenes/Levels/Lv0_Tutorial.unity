@@ -1344,9 +1344,20 @@ MonoBehaviour:
   - {fileID: 886362168}
   - {fileID: 502179276}
   fruits:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 919132149155446097, guid: 6ce47bf16a195cc45826d1399f2958ad, type: 3}
+  - {fileID: 919132149155446097, guid: 2bd83b33d5b9b1d4f81d3abba3157c10, type: 3}
+  - {fileID: 919132149155446097, guid: e621623a5bd42cf4486383605fe747e9, type: 3}
+  - {fileID: 919132149155446097, guid: 0cd38b7e14b73e746b81515a7d719168, type: 3}
+  - {fileID: 919132149155446097, guid: 084722e4562a1f343af6939fa2f2767f, type: 3}
+  - {fileID: 919132149155446097, guid: 01bf806d5482f2c449eddea7d3e80058, type: 3}
+  - {fileID: 919132149155446097, guid: 17ec58fa9083f5e47b497e268a89b7bd, type: 3}
+  - {fileID: 919132149155446097, guid: 2ef4d27ebbaaab4488ff64de60ddf59d, type: 3}
+  - {fileID: 919132149155446097, guid: 7b0ac0d43152e3f4fa0fdde7d2673599, type: 3}
+  - {fileID: 919132149155446097, guid: 5af9d79ccb36c654096d2d6b4899722e, type: 3}
+  - {fileID: 919132149155446097, guid: c0ffc9a044990b24b97a11081da42af3, type: 3}
+  - {fileID: 919132149155446097, guid: a3e3209346902ea46a5d47d4057c945d, type: 3}
+  - {fileID: 919132149155446097, guid: 404ed1105373c7a468f7e2252d1a6568, type: 3}
+  - {fileID: 919132149155446097, guid: a25ebcc41696772428eca1427b218626, type: 3}
   SpawnCount: 3
 --- !u!1001 &842162611
 PrefabInstance:
@@ -2042,6 +2053,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 182eef86cfcf87e4f9d1c432cfa83ad1, type: 3}
   m_PrefabInstance: {fileID: 1644417017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1644417021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644417018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668be9e178dc8aa4ab33deda30710f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Frutas
+    sentences:
+    - "Para ganar tendr\xE1s que recolectar las frutas de las casas \xA1Ganar\xE1s
+      puntos!"
+    - "Las frutas no siempre estar\xE1n en el mismo lugar, busca bien."
 --- !u!1001 &1687297422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,6 +2756,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.082802, y: 0.7622717, z: 0.14144082}
   m_Center: {x: 0.00000022712432, y: -0.3806404, z: 0.07012663}
+--- !u!114 &2081558805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081558801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668be9e178dc8aa4ab33deda30710f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Cofres
+    sentences:
+    - "Cuando encuentres un cofre podr\xE1s usarlo para ocultarte."
 --- !u!4 &2081558808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8c801f3e38e05f043911897bee63d4e2, type: 3}
