@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
-        SceneManager.LoadScene("GameTest");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
 
