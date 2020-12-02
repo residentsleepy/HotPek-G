@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material #41
+    second: {fileID: 2100000, guid: 314c3c2936c3d254d821ed80a11adec0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bottle glass
+    second: {fileID: 2100000, guid: bf78d9b09165af9429231c6847dbb99b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: liquid
+    second: {fileID: 2100000, guid: 2193038f1ac715342927d816d7c5aac1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

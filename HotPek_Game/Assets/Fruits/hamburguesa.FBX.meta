@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Burger1
+    second: {fileID: 2100000, guid: 6c80f6421d66aa74aad75cbbabceb4f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Burger2
+    second: {fileID: 2100000, guid: d332f1b64411af848aba563b0d254f0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Burger4
+    second: {fileID: 2100000, guid: d04ee06fc0bc5cd4ca0e27302c74c8c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: burger3
+    second: {fileID: 2100000, guid: e6bce5e11bc8a2443aeaccfc832eb515, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0.5882353, g: 0.69429445, b: 0.8039216, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 1f551b2bb4eb2a74d9b829f44779370a, type: 2}
   m_HaloStrength: 0.5
@@ -246,14 +246,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9573333, b: 0.84000003, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -286,7 +286,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -303,13 +303,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195514275}
-  m_LocalRotation: {x: 0.3681982, y: -0.44488323, z: 0.20745209, w: 0.7896029}
+  m_LocalRotation: {x: 0.367302, y: -0.4451174, z: 0.20694712, w: 0.7900207}
   m_LocalPosition: {x: 15.076693, y: 12.77, z: 4.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 50, y: -58.796, z: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 49.87, y: -58.796, z: 0}
 --- !u!1 &213347449
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 702767874516415859, guid: 905812bc1d198e447af062a082ce8082, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 702767874516415859, guid: 905812bc1d198e447af062a082ce8082, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1064,7 +1064,7 @@ RectTransform:
   m_Children:
   - {fileID: 582608266}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1233,7 +1233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 773819676181832945, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 773819676181832945, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

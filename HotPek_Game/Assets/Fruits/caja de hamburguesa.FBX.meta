@@ -6,7 +6,17 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plate
+    second: {fileID: 2100000, guid: 2caf0350255ab36478b6b00ea42d2a6e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plate.001
+    second: {fileID: 2100000, guid: aafaa02e1ad4f814c98716f8dd87b9ff, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
