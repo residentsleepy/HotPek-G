@@ -1247,6 +1247,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 773819676181832946, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
+      propertyPath: WinnCanvas
+      value: 
+      objectReference: {fileID: 1422355640}
+    - target: {fileID: 773819676181832946, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 100004, guid: 3af6f68141914ca43ba39b2403757bd0, type: 3}
     - target: {fileID: 773819676181832949, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
       propertyPath: m_Center.x
       value: -0.08
