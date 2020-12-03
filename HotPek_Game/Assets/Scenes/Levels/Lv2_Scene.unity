@@ -552,6 +552,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ed77a08d590c83498ed6443eb9db8c4, type: 3}
+--- !u!1 &250167105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2236269581090439212, guid: 3ed77a08d590c83498ed6443eb9db8c4, type: 3}
+  m_PrefabInstance: {fileID: 250167104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &318503284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2865,7 +2870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 773819675719369684, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.11056632
+      value: 0.110566325
       objectReference: {fileID: 0}
     - target: {fileID: 773819675719369684, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2931,6 +2936,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 773819676181832946, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
+      propertyPath: WinnCanvas
+      value: 
+      objectReference: {fileID: 250167105}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 065de69eb61a36d4dbef527983b49f2a, type: 3}
 --- !u!1 &1244810492
