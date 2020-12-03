@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675039013905}
-  m_LocalRotation: {x: 0.12932496, y: 0.43689802, z: -0.0636362, w: 0.88788825}
+  m_LocalRotation: {x: 0.13166264, y: 0.45094487, z: -0.067453004, w: 0.8802067}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -100,7 +100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675173359443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.0844507, y: 1.3876251, z: -2.375321}
+  m_LocalPosition: {x: -3.0844507, y: 1.3876251, z: -2.3753207}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773819675238252997}
@@ -264,7 +264,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675238252995}
-  m_LocalRotation: {x: 0.1528593, y: 0.43505394, z: -0.0752166, w: 0.8841406}
+  m_LocalRotation: {x: 0.15499213, y: 0.44899446, z: -0.07940511, w: 0.87639964}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -467,8 +467,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675514238689}
-  m_LocalRotation: {x: 0.16775084, y: -0.6039051, z: 0.13191584, w: 0.7679561}
-  m_LocalPosition: {x: -5.7266283, y: 7.1912036, z: -7.914525}
+  m_LocalRotation: {x: 0.13315706, y: 0.45082968, z: -0.06821863, w: 0.8799819}
+  m_LocalPosition: {x: -1.9767742, y: 0.8892962, z: -1.4228815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 773819676181832945}
@@ -614,7 +614,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675719369682}
-  m_LocalRotation: {x: 0.10583221, y: 0.43842623, z: -0.05207625, w: 0.8909939}
+  m_LocalRotation: {x: 0.10837191, y: 0.45256892, z: -0.05552077, w: 0.8833767}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreBonus: 10
-  particle: {fileID: 0}
+  particle: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
   WinnCanvas: {fileID: 0}
 --- !u!114 &773819676181832948
 MonoBehaviour:
@@ -1035,10 +1035,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.33
-  m_Height: 1.03
+  m_Radius: 0.22
+  m_Height: 0.75
   m_Direction: 1
-  m_Center: {x: 0, y: 0.41, z: 0}
+  m_Center: {x: 0, y: 0.4, z: 0}
 --- !u!95 &4904782652374114419
 Animator:
   serializedVersion: 3
