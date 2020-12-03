@@ -265,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675238252995}
   m_LocalRotation: {x: 0.080250144, y: 0.8692092, z: -0.15027782, w: 0.464168}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0000014305115, y: 0, z: 0.00000023841858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773819675899396714}
@@ -467,7 +467,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675514238689}
-  m_LocalRotation: {x: 0.06868619, y: 0.8726765, z: -0.128623, w: 0.46601954}
+  m_LocalRotation: {x: 0.06868617, y: 0.8726765, z: -0.12862295, w: 0.46601957}
   m_LocalPosition: {x: -3.2352872, y: 1.3876252, z: 2.1653879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -614,8 +614,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773819675719369682}
-  m_LocalRotation: {x: 0.055561222, y: 0.8759467, z: -0.10404493, w: 0.46776587}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.055561222, y: 0.87594676, z: -0.10404494, w: 0.46776587}
+  m_LocalPosition: {x: -0.000009059906, y: 0, z: 0.000004529953}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 773819676121961558}
@@ -1010,9 +1010,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a95c7e16ba7ab7340aa6626734316388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
   scoreBonus: 10
   particle: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
-  WinnCanvas: {fileID: 0}
+  WinnCanvas: {fileID: 2236269580343677084, guid: 3ed77a08d590c83498ed6443eb9db8c4, type: 3}
+  scoreText: {fileID: 0}
 --- !u!114 &773819676181832948
 MonoBehaviour:
   m_ObjectHideFlags: 0

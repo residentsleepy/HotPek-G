@@ -1540,7 +1540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2236269580976747023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1693,13 +1693,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2236269581090439213}
   - component: {fileID: 2236269581090439210}
+  - component: {fileID: 861353391214567459}
   m_Layer: 5
   m_Name: GameObject_Win
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2236269581090439213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1732,6 +1733,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff2fa7e245b9294a8a3a15e81b26dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &861353391214567459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236269581090439212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6a6a33b0e24244095ba962cdbf2dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  FruitScore: 10
+  scoretext: {fileID: 2236269579932079504}
+  TotalScore: {fileID: 2236269580276139354}
 --- !u!1 &2236269581274709889
 GameObject:
   m_ObjectHideFlags: 0
