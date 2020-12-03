@@ -2163,6 +2163,97 @@ MonoBehaviour:
     name: Silla
     sentences:
     - Una silla solitaria para una persona solitaria.
+--- !u!1001 &761493202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.97102
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.289
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.986604
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_Name
+      value: pez de tronchatoro
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+--- !u!1 &761493203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+  m_PrefabInstance: {fileID: 761493202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &761493204
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761493203}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &761493205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761493203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &763478735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,16 +2978,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointList:
-  - {fileID: 527942009}
+  - {fileID: 896023296}
   - {fileID: 189708409}
   - {fileID: 435524728}
   - {fileID: 970861781}
   - {fileID: 1764045281}
   - {fileID: 1110553778}
   - {fileID: 157471065}
-  - {fileID: 896023296}
   fruits:
-  - {fileID: 919132149155446097, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+  - {fileID: 919132149155446097, guid: a25ebcc41696772428eca1427b218626, type: 3}
   - {fileID: 919132149155446097, guid: 6ce47bf16a195cc45826d1399f2958ad, type: 3}
   - {fileID: 919132149155446097, guid: 2bd83b33d5b9b1d4f81d3abba3157c10, type: 3}
   - {fileID: 919132149155446097, guid: e621623a5bd42cf4486383605fe747e9, type: 3}
@@ -2910,8 +3000,7 @@ MonoBehaviour:
   - {fileID: 919132149155446097, guid: c0ffc9a044990b24b97a11081da42af3, type: 3}
   - {fileID: 919132149155446097, guid: a3e3209346902ea46a5d47d4057c945d, type: 3}
   - {fileID: 919132149155446097, guid: 404ed1105373c7a468f7e2252d1a6568, type: 3}
-  - {fileID: 919132149155446097, guid: a25ebcc41696772428eca1427b218626, type: 3}
-  SpawnCount: 4
+  SpawnCount: 3
 --- !u!4 &1073830648
 Transform:
   m_ObjectHideFlags: 0

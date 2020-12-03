@@ -31,6 +31,11 @@ public class FruitSpawn : MonoBehaviour
             int choiceFruit = Random.Range(0, fruits.Count); //Se escoge alguna de las frutas que tenemos en nuestra lista
             //Se instancía la fruta seleccionada en el espacio seleccionado
             fruitToSpawn = Instantiate(fruits[choiceFruit], pointList[choiceSpace].transform.position, Quaternion.identity);
+            fruitToSpawn.tag = "Fruit"; //Le otorgamos el tag Fruit al objeto a hacer spawn para que después pueda ser detectado por el personaje
+            fruitToSpawn.AddComponent<BoxCollider>(); //Le agregamos un Box Collider
+            fruitToSpawn.GetComponent<BoxCollider>().isTrigger = true; //Y hacemos que sea trigger para la interacción con el jugador
+            fruitToSpawn.AddComponent<Rigidbody>(); //Agregamos un rigibody que será importante también para la interacción con el jugador
+            fruitToSpawn.GetComponent<Rigidbody>().useGravity = false; //Desactivamos la gravedad para evitar que nuestro objeto caiga de su posición original
             pointList.RemoveAt(choiceSpace); //El espacio seleccionado se elimina de nuestra lista para asegurarnos que ninguna otra fruta aparezca en uno usado
         }
     }
