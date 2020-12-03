@@ -9,13 +9,14 @@ using UnityEngine;
 
 public class ColectFruit : MonoBehaviour
 {
-    private int score; //La puntuación del jugador
+    int score; //La puntuación del jugador
     public int scoreBonus = 10; //Y el incremento por cada fruta recogida
     private GameObject part, fruit; //Part funciona para el manejo de sistemas de particulas y Fruit representa el objeto a interactuar
     public GameObject particle; //Esto representa el sistema de partículas que usaremos en el juego, puede ser controlado en el Inspector
+    public GameObject WinnCanvas;
     private Vector3 fruitPos; //Usado para guardar la ultima posición del objeto que causó un trigger
     private bool collectable = false; //Este booleano es utilizado para determinar si podemos recoger un objeto o no
-   
+
 
     void Start()
     {
@@ -30,10 +31,17 @@ public class ColectFruit : MonoBehaviour
         {
             Debug.Log("Space Pressed"); //Un mensaje para comprobar la interacción
             part = Instantiate(particle, fruitPos, Quaternion.identity); //Part toma la instancia del sistema de partículas que tenemos establecido en la posición de la fruta con la que interactuamos
-            score += scoreBonus; //Nuestra puntuación sube
+            //Nuestra puntuación sube
+            ScoreManager.instence.addScore();
+            score = ScoreManager.instence.score;
             Debug.Log("Score: " + score); //Mensaje para comprobar que la puntuación subió
             Destroy(fruit); //Hacemos desaparecer la fruta que recogimos
             collectable = false; //Y establecemos que la interacción acabó haciendo collectable falso
+        }
+
+        if(score <= 1000)
+        {
+            WinnCanvas.SetActive(true);
         }
     }
 
