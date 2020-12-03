@@ -22,6 +22,16 @@ public class DialogueManager : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        if (animator.GetBool("IsOpen") == true)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                animator.SetBool("IsOpen", false);
+            }
+        }
+    }
     //Esta función es la usada para mostrar nuestros dialogos en pantalla usando el Animator
     //Se usa el Dialogue como parametro para tener los nombres y oraciones definidos
     public void StartDialogue(Dialogue dialogue)
