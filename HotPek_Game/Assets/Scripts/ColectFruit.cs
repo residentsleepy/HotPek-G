@@ -39,7 +39,7 @@ public class ColectFruit : MonoBehaviour
             collectable = false; //Y establecemos que la interacción acabó haciendo collectable falso
         }
 
-        if(score <= 1000)
+        if(score >= 1)
         {
             WinnCanvas.SetActive(true);
         }
