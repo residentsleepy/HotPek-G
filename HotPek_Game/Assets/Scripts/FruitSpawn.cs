@@ -32,6 +32,7 @@ public class FruitSpawn : MonoBehaviour
             //Se instancía la fruta seleccionada en el espacio seleccionado
             fruitToSpawn = Instantiate(fruits[choiceFruit], pointList[choiceSpace].transform.position, Quaternion.identity);
             fruitToSpawn.tag = "Fruit"; //Le otorgamos el tag Fruit al objeto a hacer spawn para que después pueda ser detectado por el personaje
+            fruitToSpawn.transform.localScale *= 2; //Debido al tamaño de los prefab aumentaremos su escala para hacerlos mas visibles en escena
             fruitToSpawn.AddComponent<BoxCollider>(); //Le agregamos un Box Collider
             fruitToSpawn.GetComponent<BoxCollider>().isTrigger = true; //Y hacemos que sea trigger para la interacción con el jugador
             fruitToSpawn.AddComponent<Rigidbody>(); //Agregamos un rigibody que será importante también para la interacción con el jugador
