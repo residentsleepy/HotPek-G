@@ -9,10 +9,17 @@ public class Enemy : MonoBehaviour
     NavMeshAgent nm;
     //Variable donde indicamos donde esta nuestro jugador
     public Transform target;
+    //creamos las variables para introducir los puntos de patrullaje
+    public Transform Punto1;
+    public Transform Punto2;
+    public Transform Punto3;
+
+
+
     //Distancia de vision 
     public float distanceThreshold = 10f;
 
-    public enum AIState { idle,chasing};
+    public enum AIState { idle,chasing, patrolling};
     public AIState aiState = AIState.idle;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +34,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     IEnumerator Think()
@@ -46,11 +53,15 @@ public class Enemy : MonoBehaviour
             {
                 case AIState.idle:
                     float dist = Vector3.Distance(target.position, transform.position);
+                    nm.SetDestination(transform.position);
                     if (dist < distanceThreshold)
                     {
                         aiState = AIState.chasing;
                     }
-                    nm.SetDestination(transform.position);
+                    else
+                    {
+                        aiState = AIState.patrolling;
+                    }
                     break;
                 case AIState.chasing:
                     dist = Vector3.Distance(target.position, transform.position);
@@ -60,10 +71,35 @@ public class Enemy : MonoBehaviour
                     }
                     nm.SetDestination(target.position);
                     break;
+                case AIState.patrolling:
+                    dist = Vector3.Distance(target.position, transform.position);
+                    nm.SetDestination(Punto1.position);
+                    if (dist < distanceThreshold)
+                    {
+                        aiState = AIState.chasing;
+                    }
+                    nm.SetDestination(Punto2.position);
+                    nm.SetDestination(Punto3.position);
+
+
+                    break;
                 default:
                     break;
             }
             yield return new WaitForSeconds(1f);
         }
+    }
+
+    void goToFirstPoint()
+    {
+        nm.SetDestination(Punto1.position);
+    }
+    void goToSecondPoint()
+    {
+        nm.SetDestination(Punto2.position);
+    }
+    void goToThirdPoint()
+    {
+        nm.SetDestination(Punto3.position);
     }
 }
