@@ -2218,6 +2218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pez de tronchatoro
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdc296f92bc054140aeaba25ea92bec0, type: 3}
 --- !u!1 &761493203 stripped

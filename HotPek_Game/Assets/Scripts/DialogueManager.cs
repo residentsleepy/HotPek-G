@@ -17,9 +17,9 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        animator.SetBool("IsOpen", false);
         sentences = new Queue<string>(); //Creamos la queue que nos servirá en las funciones de los dialogos
     }
-
 
 
     //Esta función es la usada para mostrar nuestros dialogos en pantalla usando el Animator

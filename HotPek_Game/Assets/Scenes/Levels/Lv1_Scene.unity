@@ -1177,6 +1177,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: sopa de abuela girasema
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fda9340830aac0247a3d7ab347f28e4e, type: 3}
+      propertyPath: m_TagString
+      value: Fruit
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fda9340830aac0247a3d7ab347f28e4e, type: 3}
 --- !u!1 &949443726 stripped

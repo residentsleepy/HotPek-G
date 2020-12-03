@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Hide
   - Enemy
+  - Fruit
   layers:
   - Default
   - TransparentFX
