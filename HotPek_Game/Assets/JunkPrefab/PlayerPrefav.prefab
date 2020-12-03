@@ -1012,6 +1012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreBonus: 10
   particle: {fileID: 0}
+  WinnCanvas: {fileID: 0}
 --- !u!114 &773819676181832948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1057,6 +1058,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6648844016378345915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6163876038580657475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ec264cbf4f6014dbbb5f86fee1ac8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6434259894079676434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1114,13 +1127,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a79864c367687f443918907a967dd623, type: 3}
---- !u!1 &6163876038580657475 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a79864c367687f443918907a967dd623, type: 3}
-  m_PrefabInstance: {fileID: 6434259894079676434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6827927857689528313 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a79864c367687f443918907a967dd623, type: 3}
+  m_PrefabInstance: {fileID: 6434259894079676434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6163876038580657475 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a79864c367687f443918907a967dd623, type: 3}
   m_PrefabInstance: {fileID: 6434259894079676434}
   m_PrefabAsset: {fileID: 0}

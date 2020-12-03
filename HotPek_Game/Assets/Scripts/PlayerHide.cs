@@ -37,6 +37,7 @@ public class PlayerHide : MonoBehaviour
         {
             flagHide = false;
             gameObject.tag = "Player";
+
         }
         if(collision.gameObject.tag == "Enemy")
         {
